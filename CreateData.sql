@@ -28,6 +28,10 @@ EXEC sp_ADD_LibraryFolder @LibraryName='Mecury', @ParentLibraryFolderID=NULL, @F
 /*** File Data ***/
 EXEC sp_ADD_FileItem @LibraryFolderID=@DirID, @FieldDisplayName='Part Map', @FilePath='C:\Pictures\Mercury\Mercury_h07_Beethoven_quadrangle_marked.png'
 EXEC sp_ADD_FileItem @LibraryFolderID=@DirID, @FieldDisplayName='Full Map', @FilePath='C:\Pictures\Mercury\Mercury_MapDEF4.jpg'
+/*** Data Item ***/
+EXEC sp_ADD_DataItem @LibraryFolderID=@DirID, @DataItemLabel='Orbital period', @DataItemValue='Orbital period = 0.241 earth years'
+EXEC sp_ADD_DataItem @LibraryFolderID=@DirID, @DataItemLabel='Rotational period', @DataItemValue='Rotational period = 58.646 earth days'
+
 	/* Add Sub Library Folder */
 	EXEC sp_ADD_LibraryFolder @LibraryName='Mecury', @ParentLibraryFolderID=@DirID, @FolderName='Core Map' , @NewDirectoryFolderID=@DirSubID OUTPUT
 	/*** File Data ***/

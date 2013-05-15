@@ -161,6 +161,7 @@ IF EXISTS(SELECT 1 FROM sys.objects WHERE name = 'sp_ADD_DataItem')
 GO
 CREATE PROCEDURE sp_ADD_DataItem (
 	@LibraryFolderID INT,
+	@DataItemLabel VARCHAR(50),
 	@DataItemValue VARCHAR(MAX)
 )
 AS

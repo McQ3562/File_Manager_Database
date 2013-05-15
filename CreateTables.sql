@@ -5,13 +5,15 @@
 --ON
 --PRIMARY  
 --    (NAME = FileManager_Data,
---    FILENAME = 'D:\Data Bases\FileManager_Data.mdf',
+--    --FILENAME = 'D:\Data Bases\FileManager_Data.mdf',
+--    FILENAME = 'c:\Program Files (x86)\Microsoft SQL Server\MSSQL10.SQLEXPRESS\MSSQL\DATA\FileManager_Data.mdf',
 --    SIZE = 10MB,
 --    MAXSIZE = 200,
 --    FILEGROWTH = 10)
 --LOG ON 
 --   (NAME = FileManager_LOG,
---    FILENAME = 'D:\Data Bases\FileManager_LOG.ldf',
+--    --FILENAME = 'D:\Data Bases\FileManager_LOG.ldf',
+--    FILENAME = 'c:\Program Files (x86)\Microsoft SQL Server\MSSQL10.SQLEXPRESS\MSSQL\DATA\FileManager_LOG.ldf',
 --    SIZE = 10MB,
 --    MAXSIZE = 200,
 --    FILEGROWTH = 10)
@@ -75,6 +77,7 @@ CREATE TABLE DataItem
 (
 	DataItemID INT IDENTITY(1,1) PRIMARY KEY,
 	LibraryFolderID INT NOT NULL,
+	DataItemLabel VARCHAR(50),
 	DataItemValue VARCHAR(MAX)
 )
 GO

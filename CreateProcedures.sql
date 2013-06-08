@@ -166,8 +166,8 @@ CREATE PROCEDURE sp_ADD_DataItem (
 )
 AS
 BEGIN
-	INSERT INTO DataItem (LibraryFolderID, DataItemValue)
-	VALUES (@LibraryFolderID, @DataItemValue)
+	INSERT INTO DataItem (LibraryFolderID, DataItemLabel, DataItemValue)
+	VALUES (@LibraryFolderID, @DataItemLabel, @DataItemValue)
 END
 GO
 
